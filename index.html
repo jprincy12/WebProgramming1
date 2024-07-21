@@ -4,25 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sip & Snack Heaven</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            padding: 5px 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            height: 150px;
+            width: 150px;
+        }
+
+        .title {
+            text-align: center;
+            padding: 20px;
+            background: #e2e2e2;
+            margin-top: 60px; 
+            position: relative; 
+        }
+        .heading {
+            margin: 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+        .quote {
+            font-style: italic;
+            color: #666;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1500px; 
+            margin: auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .container img {
+            float: right;
+            margin: 0 0 10px 20px;
+            width: 40%;
+            height: 1000;
+            border-radius: 50px;
+        }
+        .container p {
+            text-align: justify;
+            font-size: 1em; 
+            line-height: 1.4; 
+        }
+        .bulletpoint ul {
+            list-style-type: disc;
+            padding-left: 50px;
+        }
+        .bulletpoint li {
+            margin: 10px 0;
+        }
+   
+        .menu {
+            text-align: center;
+            padding: 20px;
+            background: #e2e2e2;
+        }
+        .menu a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        .info-section {
+            display: flex;
+            justify-content: space-between;
+            background: #f8f8f8;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .info-box {
+            flex-basis: calc(50% - 10px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+        .info-box h2 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #333;
+            text-align: center;
+        }
+        .info-box p {
+            margin: 10px 0 0;
+        }
+     
+        .social-links {
+            text-align: center;
+            padding: 10px 0;
+            background: #f8f8f8;
+        }
+        .social-links a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+      
+        footer {
+            text-align: Center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <h1 class="heading">Sip & Snack Heaven</h1>
-        <p class="Quote">Sip, Snacks, and Smile :)</p>
+    <div class="header">
+        <div class="logo">
+            <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip&Snacks.com" width="150" height="150">
+        </div>
+        <div class="navbar">
+            <a href="D:\WebProgramming1\index.html">Home</a>
+            <a href="D:\WebProgramming1\Login.html">Login/Signup</a>
+            <a href="D:\WebProgramming1\Contact Us.html">Contact us</a>
+            <a href="D:\WebProgramming1\Add To Cart.html">Add to Cart</a>
+        </div>
     </div>
-    <div class="logo">
-        <img src="D:\WebProgramming1\Image\Logo-removebg-preview.png" alt="Sip&Snacks.com" width="200" height="200">
-    </div>
-    <div class="navbar">
-        <a href="D:\WebProgramming1\index.html">Home</a>
-        <a href="D:\WebProgramming1\Login.html">Login</a>
-        <a href="D:\WebProgramming1\Contact Us.html">Contact us</a>
-        <a href="D:\WebProgramming1\Add To Cart.html">Add to Cart</a>
+    <div class="title">
+        <h1 class="heading">Sip & Snacks Heaven</h1>
+        <p class="quote">Sip, Snack, and Smile &#128522;</p>
     </div>
     <hr>
     <div class="container">
-        <p>Welcome to Sip & Snack Heaven, your ultimate destination for delightful beverages and delicious snacks! We're dedicated to providing you the very best of our offerings, with a focus on quality, customer service, and unique flavors.</p>
-        <p>Founded in 2024, Sip & Snack Heaven has quickly become a beloved spot in the heart of Kathmandu. Our mission is to create a warm and welcoming environment where you can enjoy your favorite drinks and snacks.</p>
+        <img src="D:\WebProgramming1\Image\snacks.jpg" alt="Snacks">
+        <p>Welcome to Sip & Snacks Heaven, your ultimate destination for delightful beverages and delicious snacks! We're dedicated to providing you 
+        the very best of our offerings, with a focus on quality, customer service, and unique flavors. Founded in 2024, 
+        Sip & Snack Heaven has quickly become a beloved spot in the heart of Kathmandu. Our mission is to create a warm and welcoming environment 
+        where you can enjoy your favorite drinks and snacks.</p>
         <div class="bulletpoint">
             <p>At Sip & Snack Heaven, we offer a wide range of services to meet your needs:</p>
             <ul>
@@ -36,20 +189,22 @@
         </div>
     </div>
     <hr>
-    <div class="menu">
-        <h1 class="menu">Our Menu</h1>
-        <p class="subheading">Check out our delicious menu featuring a variety of coffees, teas, pastries, sandwiches, and more!</p>
-        <p><a href="D:\WebProgramming1\Menu.html">Explore Our Menu</a></p>
+    <div class="info-section">
+        <div class="info-box">
+            <h2>Opening Hours</h2>
+            <p>Monday to Friday: 7:00 AM - 9:00 PM<br>
+               Saturday & Sunday: 8:00 AM - 10:00 PM</p>
+        </div>
+        <div class="info-box">
+            <h2>Location</h2>
+            <p>New Baneshwor, Kathmandu, Nepal.</p>
+        </div>
     </div>
     <hr>
-    <div class="openinghours">
-        <h2>Opening Hours</h2>
-        <p>Monday to Friday: 7:00 AM - 9:00 PM<br>
-           Saturday & Sunday: 8:00 AM - 10:00 PM</p>
-    </div>
-    <div class="location">
-        <h2>Location</h2>
-        <p>New Baneshwor, Kathmandu, Nepal.</p>
+    <div class="menu">
+        <h2>Explore Our Menu</h2>
+        <p>Check out our delicious menu featuring a variety of coffees, teas, pastries, sandwiches, and more!</p>
+        <p><a href="D:\WebProgramming1\Menu.html">View Menu</a></p>
     </div>
     <hr>
     <div class="social-links">
@@ -59,8 +214,8 @@
         </p>
     </div>
     <hr>
-    <div class="copyright">
+    <footer>
         <p>&copy; Copyright 2024. All rights reserved.</p>
-    </div>
+    </footer>
 </body>
 </html>

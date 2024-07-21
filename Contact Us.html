@@ -4,27 +4,207 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sip & Snack Heaven - Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            padding: 5px 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .logo img {
+            height: 150px;
+            width: 150px;
+        }
+
+        .heading {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .heading p {
+            text-align: center;
+            color: #333;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+
+        .contact {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .contact h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background: #555;
+        }
+
+        .get-in-touch {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .get-in-touch h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .get-in-touch p,
+        .get-in-touch ul {
+            text-align: left;
+            color: #666;
+        }
+
+        .get-in-touch a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .get-in-touch a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="D:\WebProgramming1\Image\Logo-removebg-preview.png" alt="Sip&Snacks.com" width="200" height="200">
-    </div>
-    <div class="navbar">
-        <a href="D:\WebProgramming1\index.html">Home</a>
-        <a href="D:\WebProgramming1\Menu.html">Menu</a>
-        <a href="D:\WebProgramming1\Login.html">Login</a>
-        <a href="D:\WebProgramming1\Contact Us.html">Contact us</a>
-        <a href="D:\WebProgramming1\Add To Cart.html">Add to Cart</a>
+    <div class="header">
+        <div class="logo">
+            <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip&Snacks.com" width="150" height="150">
+        </div>
+        <div class="navbar">
+            <a href="D:\WebProgramming1\index.html">Home</a>
+            <div class="dropdown">
+                <a href="D:\WebProgramming1\Menu.html">Menu</a>
+                <div class="dropdown-content">
+                    <a href="D:\WebProgramming1\Menu Folder\Beverages.html">Beverages</a>
+                    <a href="D:\WebProgramming1\Menu Folder\Snacks.html">Snacks</a>
+                    <a href="D:\WebProgramming1\Menu Folder\Breakfast.html">Breakfast</a>
+                    <a href="D:\WebProgramming1\Menu Folder\Lunch.html">Lunch</a>
+                    <a href="D:\WebProgramming1\Menu Folder\Dinner.html">Dinner</a>
+                    <a href="D:\WebProgramming1\Menu Folder\Desserts.html">Desserts</a>
+                </div>
+            </div>
+            <a href="D:\WebProgramming1\Login.html">Login/Signup</a>
+            <a href="D:\WebProgramming1\Contact Us.html">Contact us</a>
+            <a href="D:\WebProgramming1\Add To Cart.html">Add to Cart</a>
+        </div>
     </div>
     <hr>
-    <div>
-            <h1 class="heading">Contact Us</h1>
+    <div class="heading">
+        <h1 class="heading">Contact Us</h1>
         <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, we're here to assist you.</p>
     </div>
     <hr>
-    <div class="container">
+    <div class="contact">
         <h2>Contact Form</h2>
-        <p>For your convenience, you can also fill out the contact form below. We'll get back to you as soon as possible.</p>
         <form action="#" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -53,8 +233,8 @@
         </ul>
     </div>
     <hr>
-    <div class="copyright">
+    <footer>
         <p>&copy; Copyright 2024. All rights reserved.</p>
-    </div>
+    </footer>
 </body>
 </html>

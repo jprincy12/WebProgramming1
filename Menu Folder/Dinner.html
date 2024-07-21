@@ -3,22 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinner Menu - Sip&Snacks.com</title>
+    <title>Beverages Menu - Sip&Snacks.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            flex-wrap: wrap; 
+        }
+        .navbar h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 24px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+        .navbar > div {
+            display: flex;
+            align-items: center;
+        }
+        .dropdown {
+            position: relative;
+            margin-left: 15px;
+        }
+        .dropbtn {
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropbtn:hover {
+            text-decoration: underline;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            top: 100%; 
+            left: 0;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item h3 {
+            margin: 0;
+            color: #333;
+            font-size: 18px;
+        }
+        .menu-item p {
+            margin: 0;
+            color: #777;
+        }
+        .order-btn {
+            background-color: #ff9900;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .order-btn:hover {
+            background-color: #e68a00;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+</style>
 </head>
 <body>
     <div class="navbar">
-        <h1>Menu</h1>
         <div class="logo">
-            <img src="D:\WebProgramming1\Image\Logo-removebg-preview.png" alt="Sip&Snacks.com" width="200" height="200">
+            <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip&Snacks.com" width="100" height="100">
         </div>
         <div>
             <a href="D:\WebProgramming1\index.html">Home</a>
-            <a href="D:\WebProgramming1\Menu.html">Menu</a>
-            <a href="D:\WebProgramming1\Login.html">Login</a>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="D:\WebProgramming1\Menu Folder\Beverages.html">Beverages</a>
+                    <a href="D:\WebProgramming1\Menu Folder\Snacks.html">Snacks</a>
+                    <a href="D:\WebProgramming1\Menu Folder\Breakfast.html">Breakfast</a>
+                    <a href="D:\WebProgramming1\Menu Folder\Lunch.html">Lunch</a>
+                    <a href="D:\WebProgramming1\Menu Folder\Dinner.html">Dinner</a>
+                    <a href="D:\WebProgramming1\Menu Folder\Desserts.html">Desserts</a>
+                </div>
+            </div>
+            <a href="D:\WebProgramming1\Login.html">Login/Signup</a>
             <a href="D:\WebProgramming1\Contact Us.html">Contact us</a>
             <a href="D:\WebProgramming1\Add To Cart.html">Add to Cart</a>
         </div>
-    </div> 
+    </div>  
     <div class="container">
         <h2>Dinner Menu</h2>
     <ul class="menu">
@@ -95,10 +235,8 @@
     </ul>
     </div>
     <hr>
-            <div class="copyright">
-                <h3>
-              <p> @Copyright 2024. All rights reserved.</p>
-              </h3>
-            </div>
+    <footer>
+        <p>&copy; Copyright 2024. All rights reserved.</p>
+    </footer>
 </body>
 </html>
