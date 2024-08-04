@@ -6,10 +6,76 @@
     <title>Beverages Menu - Sip&Snacks.com</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: #f4f4f4;
+        }
+        .navbar {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           background-color: #333;
+           padding: 10px 20px;
+           color: #fff;
+           position: relative;
+        }
+        .logo img {
+           width: 150px;
+           height: 150px;
+        }
+        .nav-links {
+           display: flex;
+           flex-direction: column;
+           align-items: flex-end;
+           flex: 1;
+        }
+        .nav-links a {
+           color: #fff;
+           text-decoration: none;
+           margin: 5px 0;
+           padding: 5px 10px;
+           font-size: 14px;
+        }
+        .nav-links a:hover {
+           text-decoration: underline;
+        }
+        .dropdown {
+           position: relative;
+           margin-bottom: 5px; 
+        }
+        .dropbtn {
+           background-color: #333;
+           color: white;
+           padding: 5px 10px;
+           font-size: 14px;
+           border: none;
+           cursor: pointer;
+        }
+        .dropbtn:hover {
+           text-decoration: underline;
+        }
+        .dropdown-content {
+           display: none;
+           position: absolute;
+           background-color: #f9f9f9;
+           min-width: 160px;
+           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+           z-index: 1;
+           top: 100%; 
+           left: 0;
+        }
+        .dropdown-content a {
+           color: black;
+           padding: 12px 16px;
+           text-decoration: none;
+           display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         .container {
             max-width: 800px;
@@ -18,76 +84,6 @@
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 10px 20px;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            flex-wrap: wrap; 
-        }
-        .navbar h1 {
-            color: #fff;
-            margin: 0;
-            font-size: 24px;
-        }
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 15px;
-            padding: 5px 10px;
-            font-size: 16px;
-        }
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-        .logo img {
-            width: 80px;
-            height: auto;
-        }
-        .navbar > div {
-            display: flex;
-            align-items: center;
-        }
-        .dropdown {
-            position: relative;
-            margin-left: 15px;
-        }
-        .dropbtn {
-            background-color: #333;
-            color: white;
-            padding: 5px 10px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        .dropbtn:hover {
-            text-decoration: underline;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            top: 100%; 
-            left: 0;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
         }
         .menu {
             list-style-type: none;
@@ -134,14 +130,47 @@
             background: #333;
             color: #fff;
         }
-</style>
+        @media (max-width: 768px) {
+            .navbar a {
+                margin-left: 0;
+                padding: 5px;
+                display: block;
+                font-size: 14px; 
+            }
+            .logo {
+                justify-content: flex-start;
+                flex: 1;
+            }
+            .logo img {
+                height: 150px;
+                width: 150px;
+            }
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                flex: 1;
+                padding: 0;
+                margin-left: auto; 
+            }
+            .nav-links a {
+                margin: 5px 0; 
+                font-size: 14px; 
+            }
+            .dropdown-content {
+                left:auto;
+                right: 0;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
         <div class="logo">
-            <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip&Snacks.com" width="100" height="100">
+            <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip&Snacks.com">
         </div>
-        <div>
+        <div class="nav-links">
             <a href="D:\WebProgramming1\index.html">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">Menu</button>
@@ -158,7 +187,7 @@
             <a href="D:\WebProgramming1\Contact Us.html">Contact us</a>
             <a href="D:\WebProgramming1\Add To Cart.html">Add to Cart</a>
         </div>
-    </div>  
+    </div>
     <div class="container">
         <h2>Dinner Menu</h2>
     <ul class="menu">

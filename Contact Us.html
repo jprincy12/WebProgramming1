@@ -16,7 +16,7 @@
         .header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             padding: 10px 20px;
             background: #333;
             color: #fff;
@@ -24,15 +24,15 @@
 
         .navbar {
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-end;
         }
 
         .navbar a {
             color: white;
             text-decoration: none;
-            margin-left: 15px;
             padding: 5px 10px;
+            font-size: 14px;
         }
 
         .navbar a:hover {
@@ -51,6 +51,7 @@
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
+            right: 0; /* Ensures the dropdown content is fully visible */
         }
 
         .dropdown-content a {
@@ -58,6 +59,7 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            font-size: 14px; /* Set the font size for dropdown menu items */
         }
 
         .dropdown-content a:hover {
@@ -67,7 +69,6 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .logo img {
             height: 150px;
             width: 150px;
@@ -172,12 +173,61 @@
             background: #333;
             color: #fff;
         }
+            @media (max-width: 768px) {
+            .header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+            }
+            
+            .logo {
+                justify-content: flex-start;
+                flex: 1;
+            }
+            
+            .navbar {
+                flex-direction: column;
+                align-items: flex-end;
+                flex: 1;
+            }
+            
+            .navbar a {
+                margin-left: 0;
+                padding: 5px;
+                display: block;
+                font-size: 14px; /* Smaller font size for mobile view */
+            }
+            
+            .dropdown-content {
+                left:auto;
+                right: 0;
+                width: 100%;
+            }
+            
+            .order-summary {
+                margin: 20px;
+            }
+        }
+            @media (max-width: 480px) {
+            .logo img {
+                height: 100px;
+                width: 100px;
+            }
+            
+            .navbar a {
+                font-size: 12px; /* Smaller font size for smaller screens */
+            }
+            
+            .order-summary {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip&Snacks.com" width="150" height="150">
+            <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip&Snacks.com">
         </div>
         <div class="navbar">
             <a href="D:\WebProgramming1\index.html">Home</a>
@@ -199,7 +249,7 @@
     </div>
     <hr>
     <div class="heading">
-        <h1 class="heading">Contact Us</h1>
+        <h1>Contact Us</h1>
         <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, we're here to assist you.</p>
     </div>
     <hr>
@@ -225,7 +275,7 @@
     </div>
     <hr>
     <div class="get-in-touch">
-        <h1 class="getintouch">Get in Touch</h1>
+        <h1>Get in Touch</h1>
         <p>If you have any inquiries or need assistance, feel free to reach out to us through the following methods:</p>
         <ul>
             <li>Email: <a href="mailto:support@sipandsnacks.com">support@sipandsnacks.com</a></li>
