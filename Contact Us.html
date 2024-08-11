@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sip & Snack Heaven - Contact Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,87 +14,48 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-
         .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 10px 20px;
             background: #333;
             color: #fff;
         }
-
         .navbar {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+            padding: 10px;
         }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-            font-size: 14px;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            right: 0; /* Ensures the dropdown content is fully visible */
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-size: 14px; /* Set the font size for dropdown menu items */
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .logo img {
+        .navbar-brand img {
             height: 150px;
             width: 150px;
         }
-
+        .navbar-nav a {
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        .dropdown-menu {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+        .dropdown-menu a {
+            color: #fff;
+        }
+        .dropdown-menu a:hover {
+            background-color: #555;
+        }
         .heading {
             text-align: center;
             color: #333;
             margin: 20px 0;
         }
-
         .heading p {
-            text-align: center;
             color: #333;
         }
-
         hr {
             border: 0;
             height: 1px;
             background: #ddd;
             margin: 20px 0;
         }
-
-        .contact {
+        .contact, .get-in-touch {
             max-width: 600px;
             margin: 20px auto;
             padding: 20px;
@@ -100,22 +63,15 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
         }
-
-        .contact h2 {
+        .contact h2, .get-in-touch h1 {
             text-align: center;
             color: #333;
         }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
         .form-group label {
             display: block;
             margin-bottom: 5px;
             color: #333;
         }
-
         .form-group input,
         .form-group textarea {
             width: calc(100% - 20px);
@@ -124,7 +80,6 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-
         .form-group button {
             padding: 10px 20px;
             background: #333;
@@ -133,120 +88,73 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
         .form-group button:hover {
             background: #555;
         }
-
-        .get-in-touch {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        .get-in-touch h1 {
-            text-align: center;
-            color: #333;
-        }
-
         .get-in-touch p,
         .get-in-touch ul {
             text-align: left;
             color: #666;
         }
-
         .get-in-touch a {
             color: #333;
             text-decoration: none;
         }
-
         .get-in-touch a:hover {
             text-decoration: underline;
         }
-
         footer {
             text-align: center;
             padding: 10px 0;
             background: #333;
             color: #fff;
         }
-            @media (max-width: 768px) {
-            .header {
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 10px;
-            }
+        @media (max-width: 768px) {
             
-            .logo {
-                justify-content: flex-start;
-                flex: 1;
-            }
-            
-            .navbar {
-                flex-direction: column;
-                align-items: flex-end;
-                flex: 1;
-            }
-            
-            .navbar a {
-                margin-left: 0;
-                padding: 5px;
-                display: block;
-                font-size: 14px; /* Smaller font size for mobile view */
-            }
-            
-            .dropdown-content {
-                left:auto;
-                right: 0;
-                width: 100%;
-            }
-            
-            .order-summary {
-                margin: 20px;
-            }
-        }
-            @media (max-width: 480px) {
-            .logo img {
-                height: 100px;
-                width: 100px;
-            }
-            
-            .navbar a {
-                font-size: 12px; /* Smaller font size for smaller screens */
-            }
-            
-            .order-summary {
-                padding: 10px;
+            .navbar-collapse {
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
             <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip&Snacks.com">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\WebProgramming1\index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="D:\WebProgramming1\Menu Folder\Beverages.html">Beverages</a>
+                        <a class="dropdown-item" href="D:\WebProgramming1\Menu Folder\Snacks.html">Snacks</a>
+                        <a class="dropdown-item" href="D:\WebProgramming1\Menu Folder\Breakfast.html">Breakfast</a>
+                        <a class="dropdown-item" href="D:\WebProgramming1\Menu Folder\Lunch.html">Lunch</a>
+                        <a class="dropdown-item" href="D:\WebProgramming1\Menu Folder\Dinner.html">Dinner</a>
+                        <a class="dropdown-item" href="D:\WebProgramming1\Menu Folder\Desserts.html">Desserts</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\WebProgramming1\Login.html">Login/Signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\WebProgramming1\Contact Us.html">Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="D:\WebProgramming1\Add To Cart.html">Add to Cart</a>
+                </li>
+            </ul>
         </div>
-        <div class="navbar">
-            <a href="D:\WebProgramming1\index.html">Home</a>
-            <div class="dropdown">
-                <a href="D:\WebProgramming1\Menu.html">Menu</a>
-                <div class="dropdown-content">
-                    <a href="D:\WebProgramming1\Menu Folder\Beverages.html">Beverages</a>
-                    <a href="D:\WebProgramming1\Menu Folder\Snacks.html">Snacks</a>
-                    <a href="D:\WebProgramming1\Menu Folder\Breakfast.html">Breakfast</a>
-                    <a href="D:\WebProgramming1\Menu Folder\Lunch.html">Lunch</a>
-                    <a href="D:\WebProgramming1\Menu Folder\Dinner.html">Dinner</a>
-                    <a href="D:\WebProgramming1\Menu Folder\Desserts.html">Desserts</a>
-                </div>
-            </div>
-            <a href="D:\WebProgramming1\Login.html">Login/Signup</a>
-            <a href="D:\WebProgramming1\Contact Us.html">Contact us</a>
-            <a href="D:\WebProgramming1\Add To Cart.html">Add to Cart</a>
-        </div>
-    </div>
+    </nav>
     <hr>
     <div class="heading">
         <h1>Contact Us</h1>
@@ -286,5 +194,11 @@
     <footer>
         <p>&copy; Copyright 2024. All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
