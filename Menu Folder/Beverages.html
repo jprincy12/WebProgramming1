@@ -35,33 +35,12 @@
             background-color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-        }
-        .menu {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-        }
-        .menu-item h3 {
-            margin: 0;
-            color: #333;
-            font-size: 18px;
-        }
-        .menu-item p {
-            margin: 0;
-            color: #777;
         }
         .order-btn {
             background-color: #ff9900;
@@ -88,13 +67,9 @@
             color: #fff;
         }
         /* Additional media queries for mobile view */
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
             .navbar-brand img {
                 width: 90px;
-            }
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
             }
             .order-btn {
                 margin-top: 10px;
@@ -110,7 +85,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">
-                <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip & Snacks Heaven">
+                <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip & Snacks Heaven" Style="height: 50px; width: 50px;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -147,79 +122,68 @@
         </nav>
     </header>
     <div class="container">
-        <h2>Dinner Menu</h2>
-        <ul class="menu">
-            <li class="menu-item">
-                <div>
-                    <h3>Espresso</h3>
-                    <p>Rs. 200</p>
-                </div>
-                <button class="order-btn" onclick="addTocart('Espresso', 200)">Add to cart</button>
-            </li>
-            <li class="menu-item">
-                <div>
-                    <h3>Latte</h3>
-                    <p>Rs. 350</p>
-                </div>
-                <button class="order-btn" onclick="addTocart('Latte', 350)">Add to cart</button>
-            </li>
-            <li class="menu-item">
-                <div>
-                    <h3>Cappuccino</h3>
-                    <p>Rs. 350</p>
-                </div>
-                <button class="order-btn" onclick="addTocart('Cappuccino', 350)">Add to cart</button>
-            </li>
-            <li class="menu-item">
-                <div>
-                    <h3>Americano</h3>
-                    <p>Rs. 250</p>
-                </div>
-                <button class="order-btn" onclick="addTocart('Americano', 250)">Add to cart</button>
-            </li>
-            <li class="menu-item">
-                <div>
-                    <h3>Specialty Coffee</h3>
-                    <p>Rs. 200</p>
-                </div>
-                <button class="order-btn" onclick="addTocart('Specialty Coffee', 200)">Add to cart</button>
-            </li>
-            <li class="menu-item">
-                <div>
-                    <h3>Fresh Lemonade</h3>
-                    <p>Rs. 300</p>
-                </div>
-                <button class="order-btn" onclick="addTocart('Fresh Lemonade', 300)">Add to cart</button>
-            </li>
-            <li class="menu-item">
-                <div>
-                    <h3>Iced Tea</h3>
-                    <p>Rs. 250</p>
-                </div>
-                <button class="order-btn" onclick="addTocart('Iced Tea', 250)">Add to cart</button>
-            </li>
-            <li class="menu-item">
-                <div>
-                    <h3>Fruit Smoothie</h3>
-                    <p>Rs. 400</p>
-                </div>
-                <button class="order-btn" onclick="addTocart('Fruit Smoothie', 400)">Add to cart</button>
-            </li>
-            <li class="menu-item">
-                <div>
-                    <h3>Cold Brew</h3>
-                    <p>Rs. 220</p>
-                </div>
-                <button class="order-btn" onclick="addTocart('Cold Brew', 220)">Add to cart</button>
-            </li>
-            <li class="menu-item">
-                <div>
-                    <h3>Mint Mojito</h3>
-                    <p>Rs. 300</p>
-                </div>
-                <button class="order-btn" onclick="addTocart('Mint Mojito', 300)">Add to cart</button>
-            </li>
-        </ul>
+        <h2>Beverages Menu</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Beverage</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Espresso</td>
+                    <td>Rs. 200</td>
+                    <td><button class="order-btn" onclick="addTocart('Espresso', 200)">Add to cart</button></td>
+                </tr>
+                <tr>
+                    <td>Latte</td>
+                    <td>Rs. 350</td>
+                    <td><button class="order-btn" onclick="addTocart('Latte', 350)">Add to cart</button></td>
+                </tr>
+                <tr>
+                    <td>Cappuccino</td>
+                    <td>Rs. 350</td>
+                    <td><button class="order-btn" onclick="addTocart('Cappuccino', 350)">Add to cart</button></td>
+                </tr>
+                <tr>
+                    <td>Americano</td>
+                    <td>Rs. 250</td>
+                    <td><button class="order-btn" onclick="addTocart('Americano', 250)">Add to cart</button></td>
+                </tr>
+                <tr>
+                    <td>Specialty Coffee</td>
+                    <td>Rs. 200</td>
+                    <td><button class="order-btn" onclick="addTocart('Specialty Coffee', 200)">Add to cart</button></td>
+                </tr>
+                <tr>
+                    <td>Fresh Lemonade</td>
+                    <td>Rs. 300</td>
+                    <td><button class="order-btn" onclick="addTocart('Fresh Lemonade', 300)">Add to cart</button></td>
+                </tr>
+                <tr>
+                    <td>Iced Tea</td>
+                    <td>Rs. 250</td>
+                    <td><button class="order-btn" onclick="addTocart('Iced Tea', 250)">Add to cart</button></td>
+                </tr>
+                <tr>
+                    <td>Fruit Smoothie</td>
+                    <td>Rs. 400</td>
+                    <td><button class="order-btn" onclick="addTocart('Fruit Smoothie', 400)">Add to cart</button></td>
+                </tr>
+                <tr>
+                    <td>Cold Brew</td>
+                    <td>Rs. 220</td>
+                    <td><button class="order-btn" onclick="addTocart('Cold Brew', 220)">Add to cart</button></td>
+                </tr>
+                <tr>
+                    <td>Mint Mojito</td>
+                    <td>Rs. 300</td>
+                    <td><button class="order-btn" onclick="addTocart('Mint Mojito', 300)">Add to cart</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <hr>
     <footer>
@@ -227,9 +191,9 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
-integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
-integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

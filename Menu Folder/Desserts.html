@@ -35,33 +35,24 @@
             background-color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-        .menu {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        th, td {
             padding: 15px;
+            text-align: left;
             border-bottom: 1px solid #ddd;
         }
-        .menu-item h3 {
-            margin: 0;
-            color: #333;
-            font-size: 18px;
-        }
-        .menu-item p {
-            margin: 0;
-            color: #777;
+        th {
+            background-color: #f2f2f2;
         }
         .order-btn {
             background-color: #ff9900;
@@ -88,13 +79,12 @@
             color: #fff;
         }
         /* Additional media queries for mobile view */
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
             .navbar-brand img {
                 width: 90px;
             }
-            .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
+            table {
+                font-size: 14px;
             }
             .order-btn {
                 margin-top: 10px;
@@ -110,7 +100,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="#">
-                <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip & Snacks Heaven">
+                <img src="D:\WebProgramming1\Image\Logo.png" alt="Sip & Snacks Heaven" style="height: 50px; width: 50px;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -148,78 +138,67 @@
     </header>
     <div class="container">
         <h2>Desserts Menu</h2>
-    <ul class="menu">
-        <li class="menu-item">
-            <div>
-                <h3>Chocolate Cake</h3>
-                <p>Rs. 180</p>
-            </div>
-            <button class="order-btn" onclick="addToCart('Chocolate Cake', 180)">Add to Cart</button>
-        </li>
-        <li class="menu-item">
-            <div>
-                <h3>Vanilla Ice Cream</h3>
-                <p>Rs. 150</p>
-            </div>
-            <button class="order-btn" onclick="addToCart('Vanilla Ice Cream', 150)">Add to Cart</button>
-        </li>
-        <li class="menu-item">
-            <div>
-                <h3>Strawberry Cheesecake</h3>
-                <p>Rs. 200</p>
-            </div>
-            <button class="order-btn" onclick="addToCart('Strawberry Cheesecake', 200)">Add to Cart</button>
-        </li>
-        <li class="menu-item">
-            <div>
-                <h3>Mango Sorbet</h3>
-                <p>Rs. 160</p>
-            </div>
-            <button class="order-btn" onclick="addToCart('Mango Sorbet', 160)">Add to Cart</button>
-        </li>
-        <li class="menu-item">
-            <div>
-                <h3>Red Velvet Cupcake</h3>
-                <p>Rs. 170</p>
-            </div>
-            <button class="order-btn" onclick="addToCart('Red Velvet Cupcake', 170)">Add to Cart</button>
-        </li>
-        <li class="menu-item">
-            <div>
-                <h3>Chocolate Brownie</h3>
-                <p>Rs. 190</p>
-            </div>
-            <button class="order-btn" onclick="addToCart('Chocolate Brownie', 190)">Add to Cart</button>
-        </li>
-        <li class="menu-item">
-            <div>
-                <h3>Fruit Tart</h3>
-                <p>Rs. 210</p>
-            </div>
-            <button class="order-btn" onclick="addToCart('Fruit Tart', 210)">Add to Cart</button>
-        </li>
-        <li class="menu-item">
-            <div>
-                <h3>Caramel Flan</h3>
-                <p>Rs. 180</p>
-            </div>
-            <button class="order-btn" onclick="addToCart('Caramel Flan', 180)">Add to Cart</button>
-        </li>
-        <li class="menu-item">
-            <div>
-                <h3>Apple Pie</h3>
-                <p>Rs. 200</p>
-            </div>
-            <button class="order-btn" onclick="addToCart('Apple Pie', 200)">Add to Cart</button>
-        </li>
-        <li class="menu-item">
-            <div>
-                <h3>Coconut Ladoo</h3>
-                <p>Rs. 160</p>
-            </div>
-            <button class="order-btn" onclick="addToCart('Coconut Ladoo', 160)">Add to Cart</button>
-        </li>
-    </ul>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Chocolate Cake</td>
+                    <td>Rs. 180</td>
+                    <td><button class="order-btn" onclick="addToCart('Chocolate Cake', 180)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Vanilla Ice Cream</td>
+                    <td>Rs. 150</td>
+                    <td><button class="order-btn" onclick="addToCart('Vanilla Ice Cream', 150)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Strawberry Cheesecake</td>
+                    <td>Rs. 200</td>
+                    <td><button class="order-btn" onclick="addToCart('Strawberry Cheesecake', 200)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Mango Sorbet</td>
+                    <td>Rs. 160</td>
+                    <td><button class="order-btn" onclick="addToCart('Mango Sorbet', 160)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Red Velvet Cupcake</td>
+                    <td>Rs. 170</td>
+                    <td><button class="order-btn" onclick="addToCart('Red Velvet Cupcake', 170)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Chocolate Brownie</td>
+                    <td>Rs. 190</td>
+                    <td><button class="order-btn" onclick="addToCart('Chocolate Brownie', 190)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Fruit Tart</td>
+                    <td>Rs. 210</td>
+                    <td><button class="order-btn" onclick="addToCart('Fruit Tart', 210)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Caramel Flan</td>
+                    <td>Rs. 180</td>
+                    <td><button class="order-btn" onclick="addToCart('Caramel Flan', 180)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Apple Pie</td>
+                    <td>Rs. 200</td>
+                    <td><button class="order-btn" onclick="addToCart('Apple Pie', 200)">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td>Coconut Ladoo</td>
+                    <td>Rs. 160</td>
+                    <td><button class="order-btn" onclick="addToCart('Coconut Ladoo', 160)">Add to Cart</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <hr>
     <footer>
@@ -227,9 +206,9 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
-integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
-integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
